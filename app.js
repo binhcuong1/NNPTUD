@@ -24,8 +24,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/comments',require('./routes/comments'))
 app.use('/products',require('./routes/products'))
+app.use('/categories', require('./routes/categories'));
 
-mongoose.connect('mongodb://localhost:27017/NNPTUD-S5').catch(
+mongoose.connect('mongodb+srv://binhcuongpy2014_db_user:<db_password>@cluster0.rg6opgb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0').catch(
   function(err){
     console.log(err);
   }
